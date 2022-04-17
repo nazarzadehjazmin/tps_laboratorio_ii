@@ -37,7 +37,6 @@ namespace Entidades
 
         /// <summary>
         /// Comprobará que el valor recibido sea numérico. 
-        /// Permite al usuario el ingreso de numeros con coma o con punto, ya que el programa trabajara de manera independiente a la configuración local del usuario.
         /// </summary>
         /// <param name="strNumero"></param>
         /// <returns> En caso de exito, retornara el numero recibido como double, de lo contrario 0. </returns>
@@ -45,9 +44,9 @@ namespace Entidades
         {
             double retorno = 0;
 
-            if (!string.IsNullOrEmpty(strNumero) && double.TryParse(strNumero, out double numeroEntero))
+            if (!string.IsNullOrEmpty(strNumero))
             {
-                retorno = Convert.ToDouble(strNumero, System.Globalization.CultureInfo.InvariantCulture);
+                double.TryParse(strNumero, out retorno);
             }
 
             return retorno;
