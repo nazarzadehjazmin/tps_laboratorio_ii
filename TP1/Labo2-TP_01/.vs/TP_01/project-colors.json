@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "220bcffc-1e65-4ab4-ae38-6e8255c2def1": {
+      "ProjectGuid": "220bcffc-1e65-4ab4-ae38-6e8255c2def1",
+      "DisplayName": "Entidades",
+      "ColorIndex": 0
+    },
+    "b006aa33-090b-4896-88bc-c2bdc39f3054": {
+      "ProjectGuid": "b006aa33-090b-4896-88bc-c2bdc39f3054",
+      "DisplayName": "ConsoleApp1",
+      "ColorIndex": 1
+    },
+    "20615599-3ca4-4867-ad6a-98366ab2f584": {
+      "ProjectGuid": "20615599-3ca4-4867-ad6a-98366ab2f584",
+      "DisplayName": "MiCalculadora",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 3
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wPlrviBuJwtxXZIGeH8YiPbqptZezBgktLzp7fiWe7CCJDSzBKN1KcnZO34zC3f6USYYJvbPRwClZgPELxajug==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\Documents\\GitHub\\tps_laboratorio_ii\\TP1\\Labo2-TP_01\\MiCalculadora\\MiCalculadora.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
