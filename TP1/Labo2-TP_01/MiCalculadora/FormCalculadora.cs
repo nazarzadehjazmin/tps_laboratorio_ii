@@ -16,6 +16,7 @@ namespace MiCalculadora
         }
 
         #region Metodos
+
         /// <summary>
         /// Reestablecera los datos de los TextBox, ComboBox y Label de la pantalla a su valor inicial 
         /// (TextBox y ComboBox a string vacio y label a 0).
@@ -61,6 +62,7 @@ namespace MiCalculadora
         #endregion
 
         #region Eventos
+
         /// <summary>
         /// Carga el Windows Forms de Calculadora con los valores por defecto.
         /// </summary>
@@ -70,6 +72,7 @@ namespace MiCalculadora
         {
             Limpiar();
         }
+
         /// <summary>
         /// Evento para reestrablecer los valores por defecto del Forms de Calculadora.
         /// </summary>
@@ -87,15 +90,15 @@ namespace MiCalculadora
         /// <param name="e"></param>
         private void btnOperar_Click(object sender, EventArgs e)
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder stringCalculo = new StringBuilder();
 
-            if (!string.IsNullOrEmpty(txtNumero1.Text) && !string.IsNullOrEmpty(txtNumero2.Text) && !string.IsNullOrEmpty(cmbOperador.Text))
+            if (!string.IsNullOrEmpty(txtNumero1.Text) && !string.IsNullOrEmpty(txtNumero2.Text) && !string.IsNullOrEmpty(cmbOperador.Text) && double.TryParse(txtNumero1.Text, out double numero1) && double.TryParse(txtNumero2.Text, out double numero2))
             {
                 if (!(txtNumero2.Text == "0" && cmbOperador.SelectedIndex == 3))
                 {
                     lblResultado.Text = FormCalculadora.Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text).ToString();
-                    sb.AppendLine($"{txtNumero1.Text} {cmbOperador.Text} {txtNumero2.Text} = {lblResultado.Text}");
-                    lstOperaciones.Items.Add(sb);
+                    stringCalculo.AppendLine($"{numero1} {cmbOperador.Text} {numero2} = {lblResultado.Text}");
+                    lstOperaciones.Items.Add(stringCalculo);
                     ActivarBotonesConversores();
                 }
                 else
@@ -108,6 +111,7 @@ namespace MiCalculadora
                 MessageBox.Show("No se puede realizar la operacion, reingrese los datos");
             }
         }
+
         /// <summary>
         /// Evento que devuelve el numero que se encuentra actualmente en el label del resultado en binario, (en caso de que sea decimal). Tambien lo muestra en en la lista.
         /// </summary>
@@ -149,7 +153,7 @@ namespace MiCalculadora
                 btnConvertirADecimal.Enabled = false;
             }
         }
-        
+
         /// <summary>
         /// Evento que cierra el Windows Forms de Calculadora.
         /// </summary>
@@ -168,7 +172,9 @@ namespace MiCalculadora
         private void FormCalculadora_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("¿Seguro de querer salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
                 e.Cancel = true;
+            }
         }
 
         #endregion

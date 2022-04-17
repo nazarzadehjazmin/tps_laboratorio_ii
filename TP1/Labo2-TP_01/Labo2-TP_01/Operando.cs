@@ -6,9 +6,6 @@ namespace Entidades
     {
         private double numero;
 
-        /// <summary>
-        /// Propiedad donde se settea el valor del atributo numero
-        /// </summary>
         private string Numero
         {
             set
@@ -19,24 +16,13 @@ namespace Entidades
 
         #region Constructores
 
-        /// <summary>
-        /// Constructor por defecto. Asignará valor 0 al atributo numero
-        /// </summary>
         public Operando() : this(0) { }
 
-        /// <summary>
-        /// Constructor con parametros. Asignara un valor al atributo numero
-        /// </summary>
-        /// <param name="numero"></param>
         public Operando(double numero)
         {
             this.numero = numero;
         }
 
-        /// <summary>
-        /// Constructor con parametros. Asignara un valor a la propiedad Numero
-        /// </summary>
-        /// <param name="strNumero"></param>
         public Operando(string strNumero)
         {
             Numero = strNumero;
@@ -56,8 +42,10 @@ namespace Entidades
         {
             double retorno = 0;
 
-            if(!string.IsNullOrEmpty(strNumero))
+            if (!string.IsNullOrEmpty(strNumero) && double.TryParse(strNumero, out double numeroEntero))
+            {
                 retorno = Convert.ToDouble(strNumero, System.Globalization.CultureInfo.InvariantCulture);
+            }
 
             return retorno;
         }
@@ -66,7 +54,7 @@ namespace Entidades
         /// Validará que la cadena de caracteres esté compuesta SOLAMENTE por caracteres '0' o '1'.
         /// </summary>
         /// <param name="binario"></param>
-        /// <returns> TRUE si solo hay 1 o 0, y en el caso contrario, FALSE</returns>
+        /// <returns> TRUE si solo hay 1 o 0, y en el caso contrario, FALSE. </returns>
 
         private bool EsBinario(string binario)
         {
@@ -90,7 +78,7 @@ namespace Entidades
         /// Validará que el numero ingresado sea un binario y luego lo convertirá a decimal, en caso de ser posible.
         /// </summary>
         /// <param name="binario"></param>
-        /// <returns> El numero binario convertido a decimal en caso de exito, de lo contrario "Valor invalido".</returns>
+        /// <returns> El numero binario convertido a decimal en caso de exito, de lo contrario "Valor invalido". </returns>
         public string BinarioDecimal(string binario)
         {
             string retorno = "Valor invalido";
@@ -99,8 +87,10 @@ namespace Entidades
             if (EsBinario(binario))
             {
                 numeroEntero = Convert.ToInt32(binario, 2);
-                if(numeroEntero > 0)
+                if (numeroEntero > 0)
+                {
                     retorno = numeroEntero.ToString();
+                }
             }
 
             return retorno;
@@ -110,13 +100,15 @@ namespace Entidades
         /// Validará que el numero ingresado como string sea un decimal y luego lo convertirá a binario, en caso de ser posible.
         /// </summary>
         /// <param name="numero"></param>
-        /// <returns></returns>
+        /// <returns> Retornara el numero binario como un string, en caso de exito. Caso contrario, retornara "Valor inválido". </returns>
         public string DecimalBinario(string numero)
         {
             string retorno = "Valor inválido";
 
             if (int.TryParse(numero, out int numeroEntero) && numeroEntero > 0)
+            {
                 retorno = Convert.ToString(numeroEntero, 2);
+            }
 
             return retorno;
         }
@@ -125,7 +117,7 @@ namespace Entidades
         /// Validará que el numero ingresado como double sea un decimal y luego lo convertirá a binario, en caso de ser posible.
         /// </summary>
         /// <param name="numero"></param>
-        /// <returns></returns>
+        /// <returns> Retornara el numero binario como un string, en caso de exito. Caso contrario, retornara "Valor inválido". </returns>
         public string DecimalBinario(double numero)
         {
             return DecimalBinario(numero.ToString());
@@ -145,7 +137,9 @@ namespace Entidades
             double resultado = 0;
 
             if (n1 is not null && n2 is not null)
+            {
                 resultado = n1.numero + n2.numero;
+            }
 
             return resultado;
         }
@@ -161,7 +155,9 @@ namespace Entidades
             double resultado = 0;
 
             if (n1 is not null && n2 is not null)
+            {
                 resultado = n1.numero - n2.numero;
+            }
 
             return resultado;
         }
@@ -177,7 +173,9 @@ namespace Entidades
             double resultado = 0;
 
             if (n1 is not null && n2 is not null)
+            {
                 resultado = n1.numero * n2.numero;
+            }
 
             return resultado;
         }
@@ -193,10 +191,16 @@ namespace Entidades
             double resultado = 0;
 
             if (n1 is not null && n2 is not null)
+            {
                 if (n2.numero != 0)
+                {
                     resultado = n1.numero / n2.numero;
+                }
                 else
+                {
                     resultado = double.MinValue;
+                }
+            }
 
             return resultado;
         }
