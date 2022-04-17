@@ -42,17 +42,17 @@
             // 
             // txtNumero1
             // 
-            this.txtNumero1.Location = new System.Drawing.Point(44, 60);
+            this.txtNumero1.Location = new System.Drawing.Point(44, 76);
             this.txtNumero1.Name = "txtNumero1";
             this.txtNumero1.Size = new System.Drawing.Size(112, 23);
             this.txtNumero1.TabIndex = 0;
             // 
             // txtNumero2
             // 
-            this.txtNumero2.Location = new System.Drawing.Point(342, 60);
+            this.txtNumero2.Location = new System.Drawing.Point(342, 76);
             this.txtNumero2.Name = "txtNumero2";
             this.txtNumero2.Size = new System.Drawing.Size(104, 23);
-            this.txtNumero2.TabIndex = 1;
+            this.txtNumero2.TabIndex = 2;
             // 
             // btnOperar
             // 
@@ -60,7 +60,7 @@
             this.btnOperar.Location = new System.Drawing.Point(44, 145);
             this.btnOperar.Name = "btnOperar";
             this.btnOperar.Size = new System.Drawing.Size(112, 52);
-            this.btnOperar.TabIndex = 2;
+            this.btnOperar.TabIndex = 5;
             this.btnOperar.Text = "Operar";
             this.btnOperar.UseVisualStyleBackColor = true;
             this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
@@ -71,7 +71,7 @@
             this.btnCerrar.Location = new System.Drawing.Point(342, 145);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(104, 52);
-            this.btnCerrar.TabIndex = 3;
+            this.btnCerrar.TabIndex = 7;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -82,7 +82,7 @@
             this.btnLimpiar.Location = new System.Drawing.Point(196, 145);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(111, 52);
-            this.btnLimpiar.TabIndex = 4;
+            this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -93,7 +93,7 @@
             this.btnConvertirADecimal.Location = new System.Drawing.Point(268, 239);
             this.btnConvertirADecimal.Name = "btnConvertirADecimal";
             this.btnConvertirADecimal.Size = new System.Drawing.Size(178, 52);
-            this.btnConvertirADecimal.TabIndex = 5;
+            this.btnConvertirADecimal.TabIndex = 9;
             this.btnConvertirADecimal.Text = "Convertir a Decimal";
             this.btnConvertirADecimal.UseVisualStyleBackColor = true;
             this.btnConvertirADecimal.Click += new System.EventHandler(this.btnConvertirADecimal_Click);
@@ -104,7 +104,7 @@
             this.btnConvertirABinario.Location = new System.Drawing.Point(44, 239);
             this.btnConvertirABinario.Name = "btnConvertirABinario";
             this.btnConvertirABinario.Size = new System.Drawing.Size(177, 52);
-            this.btnConvertirABinario.TabIndex = 6;
+            this.btnConvertirABinario.TabIndex = 8;
             this.btnConvertirABinario.Text = "Convertir a Binario";
             this.btnConvertirABinario.UseVisualStyleBackColor = true;
             this.btnConvertirABinario.Click += new System.EventHandler(this.btnConvertirABinario_Click);
@@ -119,10 +119,10 @@
             "-",
             "/",
             "*"});
-            this.cmbOperador.Location = new System.Drawing.Point(196, 60);
+            this.cmbOperador.Location = new System.Drawing.Point(196, 76);
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(111, 23);
-            this.cmbOperador.TabIndex = 7;
+            this.cmbOperador.TabIndex = 1;
             // 
             // lstOperaciones
             // 
@@ -130,27 +130,28 @@
             this.lstOperaciones.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lstOperaciones.FormattingEnabled = true;
             this.lstOperaciones.ItemHeight = 17;
-            this.lstOperaciones.Location = new System.Drawing.Point(514, 60);
+            this.lstOperaciones.Location = new System.Drawing.Point(496, 43);
             this.lstOperaciones.Name = "lstOperaciones";
-            this.lstOperaciones.Size = new System.Drawing.Size(288, 225);
-            this.lstOperaciones.TabIndex = 8;
+            this.lstOperaciones.Size = new System.Drawing.Size(306, 242);
+            this.lstOperaciones.TabIndex = 4;
             // 
             // lblResultado
             // 
-            this.lblResultado.AutoSize = true;
-            this.lblResultado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblResultado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblResultado.Location = new System.Drawing.Point(425, 21);
+            this.lblResultado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblResultado.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblResultado.Location = new System.Drawing.Point(44, 22);
+            this.lblResultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(21, 23);
-            this.lblResultado.TabIndex = 9;
+            this.lblResultado.Size = new System.Drawing.Size(402, 33);
+            this.lblResultado.TabIndex = 3;
             this.lblResultado.Text = "0";
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FormCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 331);
+            this.ClientSize = new System.Drawing.Size(851, 327);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.lstOperaciones);
             this.Controls.Add(this.cmbOperador);

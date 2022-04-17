@@ -94,21 +94,18 @@ namespace MiCalculadora
 
             if (!string.IsNullOrEmpty(txtNumero1.Text) && !string.IsNullOrEmpty(txtNumero2.Text) && !string.IsNullOrEmpty(cmbOperador.Text) && double.TryParse(txtNumero1.Text, out double numero1) && double.TryParse(txtNumero2.Text, out double numero2))
             {
-                if (!(txtNumero2.Text == "0" && cmbOperador.SelectedIndex == 3))
+                lblResultado.Text = FormCalculadora.Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text).ToString();
+                stringCalculo.AppendLine($"{numero1} {cmbOperador.Text} {numero2} = {lblResultado.Text}");
+                lstOperaciones.Items.Add(stringCalculo);
+                ActivarBotonesConversores();
+                if ((txtNumero2.Text == "0" && cmbOperador.SelectedIndex == 3))
                 {
-                    lblResultado.Text = FormCalculadora.Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text).ToString();
-                    stringCalculo.AppendLine($"{numero1} {cmbOperador.Text} {numero2} = {lblResultado.Text}");
-                    lstOperaciones.Items.Add(stringCalculo);
-                    ActivarBotonesConversores();
-                }
-                else
-                {
-                    MessageBox.Show("No se puede dividir por cero, reingrese los datos");
+                    MessageBox.Show("No se puede dividir por cero, reingrese los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("No se puede realizar la operacion, reingrese los datos");
+                MessageBox.Show("No se puede realizar la operacion, reingrese los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

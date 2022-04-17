@@ -16,7 +16,10 @@ namespace Entidades
 
         #region Constructores
 
-        public Operando() : this(0) { }
+        public Operando() : this(0) 
+        { 
+        
+        }
 
         public Operando(double numero)
         {
