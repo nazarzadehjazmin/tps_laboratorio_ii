@@ -39,7 +39,7 @@ namespace MiCalculadora
         private static double Operar(string numero1, string numero2, string operador)
         {
             double retorno = 0;
-            if (!string.IsNullOrEmpty(numero1) && !string.IsNullOrEmpty(numero2) && !string.IsNullOrEmpty(operador))
+            if (!string.IsNullOrEmpty(numero1) && !string.IsNullOrEmpty(numero2))
             {
                 Operando num1 = new Operando(numero1);
                 Operando num2 = new Operando(numero2);
@@ -92,13 +92,20 @@ namespace MiCalculadora
         {
             StringBuilder stringCalculo = new StringBuilder();
 
-            if (!string.IsNullOrEmpty(txtNumero1.Text) && !string.IsNullOrEmpty(txtNumero2.Text) && !string.IsNullOrEmpty(cmbOperador.Text) && double.TryParse(txtNumero1.Text, out double numero1) && double.TryParse(txtNumero2.Text, out double numero2))
+            if (!string.IsNullOrEmpty(txtNumero1.Text) && !string.IsNullOrEmpty(txtNumero2.Text) && double.TryParse(txtNumero1.Text, out double numero1) && double.TryParse(txtNumero2.Text, out double numero2))
             {
                 lblResultado.Text = FormCalculadora.Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text).ToString();
+
+                if (cmbOperador.Text == "")
+                {
+                    cmbOperador.SelectedIndex = 1;
+                }
+
                 stringCalculo.AppendLine($"{numero1} {cmbOperador.Text} {numero2} = {lblResultado.Text}");
                 lstOperaciones.Items.Add(stringCalculo);
                 ActivarBotonesConversores();
-                if ((txtNumero2.Text == "0" && cmbOperador.SelectedIndex == 3))
+
+                if (txtNumero2.Text == "0" && cmbOperador.SelectedIndex == 3)
                 {
                     MessageBox.Show("No se puede dividir por cero, reingrese los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

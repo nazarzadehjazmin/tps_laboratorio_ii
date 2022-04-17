@@ -114,7 +114,7 @@
             this.cmbOperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOperador.FormattingEnabled = true;
             this.cmbOperador.Items.AddRange(new object[] {
-            " ",
+            "",
             "+",
             "-",
             "/",
