@@ -101,13 +101,11 @@ namespace MiCalculadora
                 else
                 {
                     MessageBox.Show("No se puede dividir por cero, reingrese los datos");
-
                 }
             }
             else
             {
                 MessageBox.Show("No se puede realizar la operacion, reingrese los datos");
-
             }
         }
         /// <summary>
@@ -129,7 +127,6 @@ namespace MiCalculadora
 
                 btnConvertirABinario.Enabled = false;
             }
-
         }
 
         /// <summary>
@@ -151,7 +148,6 @@ namespace MiCalculadora
 
                 btnConvertirADecimal.Enabled = false;
             }
-
         }
         
         /// <summary>

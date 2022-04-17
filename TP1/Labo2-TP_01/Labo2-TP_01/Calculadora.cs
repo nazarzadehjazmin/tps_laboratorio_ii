@@ -49,7 +49,5 @@ namespace Entidades
 
             return retorno;
         }
-
-       
     }
 }

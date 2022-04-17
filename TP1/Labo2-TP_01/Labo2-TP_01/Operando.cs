@@ -56,11 +56,6 @@ namespace Entidades
         {
             double retorno = 0;
 
-            //if (double.TryParse(strNumero, out double exito))
-                //retorno = Convert.ToDouble(strNumero, System.Globalization.CultureInfo.InvariantCulture);
-
-            //return retorno;
-
             if(!string.IsNullOrEmpty(strNumero))
                 retorno = Convert.ToDouble(strNumero, System.Globalization.CultureInfo.InvariantCulture);
 
