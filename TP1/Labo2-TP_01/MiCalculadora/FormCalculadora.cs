@@ -92,13 +92,12 @@ namespace MiCalculadora
         {
             StringBuilder stringCalculo = new StringBuilder();
 
-            if (!string.IsNullOrEmpty(txtNumero1.Text) && !string.IsNullOrEmpty(txtNumero2.Text) &&
-                double.TryParse(txtNumero1.Text, out double numero1) && double.TryParse(txtNumero2.Text, out double numero2) &&
+            if (double.TryParse(txtNumero1.Text, out double numero1) && double.TryParse(txtNumero2.Text, out double numero2) &&
                 !txtNumero1.Text.Contains(".") && !txtNumero2.Text.Contains("."))
             {
                 lblResultado.Text = FormCalculadora.Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text).ToString();
 
-                if (cmbOperador.Text == "")
+                if (cmbOperador.Text == string.Empty)
                 {
                     cmbOperador.SelectedIndex = 1;
                 }
