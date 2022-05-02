@@ -17,3 +17,9 @@ C:\Users\user\Documents\GitHub\tps_laboratorio_ii\TP2\TP-02-Cascara.r2\TP-02\Ent
 C:\Users\user\Documents\GitHub\tps_laboratorio_ii\TP2\TP-02-Cascara.r2\TP-02\Entidades\obj\Debug\Entidades.dll
 C:\Users\user\Documents\GitHub\tps_laboratorio_ii\TP2\TP-02-Cascara.r2\TP-02\Entidades\obj\Debug\Entidades.pdb
 C:\Users\user\Documents\GitHub\tps_laboratorio_ii\TP2\TP-02-Cascara.r2\TP-02\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\user\Documents\GitHub\tps_laboratorio_ii\TP2\Entidades\bin\Debug\Entidades.dll
+C:\Users\user\Documents\GitHub\tps_laboratorio_ii\TP2\Entidades\bin\Debug\Entidades.pdb
+C:\Users\user\Documents\GitHub\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\user\Documents\GitHub\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.dll
+C:\Users\user\Documents\GitHub\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.pdb
